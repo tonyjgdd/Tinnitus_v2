@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    HISTORIA CLINICA TINNITUS        
+                   </h3>
+            </div>
+        </nav>
+    </div>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="dashboard.html">
+                <!-- antecedentes -->
+                <div class="container mt-2 border p-3" id="container1">
+                    <h1 class="h5 texto-pregunta">HISTORIA CLÍNICA GENERAL </h1>
+                    <br>
+                    <label><b>19. ¿Padece de algún tipo de alergia a medicamentos? </b> </label>
+                    <br>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options12" id="opcion12_1" autocomplete="off" required>
+                            Sí
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options12" id="opcion12_2" autocomplete="off" required>
+                            No
+                        </label>
+                    </div>
+                    <br><br>
+                    <label><b>20. ¿Hay algún tipo de enfermedades en la familia? </b> </label><br>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options13" id="opcion13_1" autocomplete="off" required>
+                            Sí
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options13" id="opcion13_2" autocomplete="off" required>
+                            No
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-6">
+                                Indique las enfermedades que tenga:
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="resumen_enfermedades" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-6">
+                                Indique los tratamientos que realiza:
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="resumen_tratamientos" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-6">
+                                Indique las medicaciones que ha tomado para los acúfenos:
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="resumen_medicaicones" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-6">
+                                Indique que otros tratamientos he hecho para los acúfenos:
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control" id="resumen_tratamien" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                   <div class="row">
+                    <div class="col">
+                        <label><b>21. ¿Ha mejorado de los acúfenos con algún tratamiento? </b> </label>
+                        <br>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options13" id="opcion13_1" autocomplete="off" required>
+                                Sí
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options13" id="opcion13_2" autocomplete="off" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label><b>22. ¿Está en tratamiento por algún problema o psiquiátrico?</b> </label>
+                        <br>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options14" id="opcion14_1" autocomplete="off" required>
+                                Sí
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options14" id="opcion14_2" autocomplete="off" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label><b>23. ¿Utiliza audífonos? </b> </label>
+                        <br>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options18" id="opcion18_1" autocomplete="off" required>
+                                Sí
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options18" id="opcion18_2" autocomplete="off" required>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                   </div>
+
+
+                </div>
+
+                <div class="container mt-2 border p-3" id="container3">
+                    <h1 class="h5 texto-pregunta">VALORACIÓN SUBJETIVA DE LAS MOLESTIAS DEL ACÚFENO. VSM-5 </h1>
+                    <br>
+                    <label><b>18. Marque:</b> </label>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <h5>molestias producidas por el acufeno</h5>
+                            <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options15" id="opcion15_1" autocomplete="off" required>
+                                    Ninguna molestia
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options15" id="opcion15_2" autocomplete="off" required>
+                                    Escasa molestia
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options15" id="opcion15_3" autocomplete="off" required>
+                                    Moderada molestia
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options15" id="opcion15_4" autocomplete="off" required>
+                                    Muy molesto
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options15" id="opcion15_5" autocomplete="off" required>
+                                    Insoportable
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="container mt-2 border p-3" id="container4">
+                    <h1 class="h5 texto-pregunta">INDICAR CUALQUIER OTRO ASUNTO DE INTERÉS </h1>
+                    <br>
+                        <textarea class="form-control" id="resumen_tratamien" rows="6" required></textarea>
+                </div>
+
+
+
+                <br>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="finalizarButton">
+                        FINALIZAR
+                    </button>
+                    <a href="javascript:history.back()" type="button" class="btn btn-primary">REGRESAR</a>
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que deseas finalizar el formulario?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Finalizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+            </form>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/validar_required.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

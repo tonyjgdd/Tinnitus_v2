@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimarket SuperStore</title>
+
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <style>
+
+        /* Establece una imagen de fondo */
+        .bg-image {
+            background-image: url('img/mosaico.png');
+            /* Ruta a tu imagen de fondo */
+            background-size: cover;
+            /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat;
+            /* Evita la repetición de la imagen */
+            background-attachment: fixed;
+            /* Fija la imagen de fondo al desplazarse */
+        }
+        .bg-image::before {
+    content: "";
+    background-image: inherit; /* Hereda la imagen de fondo del elemento principal */
+    background-size: inherit; /* Hereda el tamaño de fondo */
+    background-repeat: inherit; /* Hereda la repetición */
+    background-attachment: inherit; /* Hereda la fijación de fondo */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Coloca la capa de fondo detrás del contenido */
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Estilos/Fuentes.css">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <!-- Barra de navegación -->
+
+    <main class="content">
+        <div class="container mt-5 rounded-circle" >
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="img/logo.png" alt="Tinnituslogo" width="200">
+                                </a>
+                    
+                            </div>
+                            <h4 class="mb-2">Bienvenidos a Tinnitus Peru!</h4>
+                            <h4>👋</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="dashboard.html"  method="get">
+                                <div class="form-group">
+                                    <label for="username">Nombre de usuario:</label>
+                                    <input type="text" class="form-control" id="username" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-purple  btn-block">SIGUIENTE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- Scripts de Bootstrap y otros archivos JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

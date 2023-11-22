@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULTA NUTRICIÓN</title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    CONSULTA NUTRICION       
+                   </h3>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="dashboard.html" >
+
+                <div class="container mt-2 border p-3" id="container0">
+                    <h4 class="text-center  border-bottom">Plan de Alimentación</h4><br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="fs-5">
+                                    <th>
+                                        Alimentos
+                                    </th>
+                                    <th>
+                                        Cantidad <span class="fs-6">(segun medida casera)</span>
+                                    </th>
+                                    <th>
+                                        Peso <span class="fs-6">(gramos)</span> o Volumen <span class="fs-6">(ml)</span>
+                                    </th>
+                                    <th>
+                                        Tipo de Alimento Permitido
+                                    </th>
+                                    <th>
+                                        Forma de Preparación Recomendada
+                                    </th>
+                                </tr>
+                            </thead>
+                            <body>
+                                <tr>
+                                    <th>
+                                        Leche
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Leche fresca descremada/ leche light</th>
+                                    <th class="text-secondary">Bebida </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Queso
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Queso fresco, queso fresco pasteurizado</th>
+                                    <th class="text-secondary">Solo, acompañado (sándwich), en preparaciones: sopa, ensaladas, etc. </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Yogurt
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Yogurt descremado 0% azúcar “Slim” “Sbelt” o “Griego”</th>
+                                    <th class="text-secondary">Solo, acompañado con fruta fresca o semillas</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Carnes
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Solo magras (sin piel, pellejo, ni grasa). Pechuga pollo, pavita, res</th>
+                                    <th rowspan="2" class="text-secondary">Cocidas, a la plancha, horno, guisadas.<span class="text-danger"> Evitar empanizar o freír el alimento.</span></th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Pescado
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Pescado fresco, atún en agua</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Huevo
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">
+                                        Claras (
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="claras" id="clarasSi" value="si">
+                                            <label class="form-check-label" for="clarasSi">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="claras" id="clarasNo" value="no">
+                                            <label class="form-check-label" for="clarasNo">No</label>
+                                        </div>
+                                        ) , yema (
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="yema" id="yemaSi" value="si">
+                                            <label class="form-check-label" for="yemaSi">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="yema" id="yemaNo" value="no">
+                                            <label class="form-check-label" for="yemaNo">No</label>
+                                        </div>
+                                        )
+                                    </th>
+                                    <th class="text-secondary">Sancochado, pasado, omelette.<span class="text-danger"> Evitar freír</span></th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Menestras
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Frijoles, lentejas, arveja partida, pallares, garbanzo</th>
+                                    <th class="text-secondary">Guisado, sopas, ensaladas</th>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    <th>
+                                        Cereales y granos (de preferencia integrales)
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">
+                                        Pan integral (
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pan_integral" id="pan_integral_Si" value="si">
+                                            <label class="form-check-label" for="clarasSi">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="pan_integralno" id="pan_integral_Sino" value="no">
+                                            <label class="form-check-label" for="clarasNo">No</label>
+                                        </div>
+                                        ) , Tostada integral (
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tostada_integral" id="tostada_si" value="si">
+                                            <label class="form-check-label" for="yemaSi">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="tostada_integralno" id="tostada_no" value="no">
+                                            <label class="form-check-label" for="yemaNo">No</label>
+                                        </div>
+                                        ). Arroz, quinua, trigo, fideos, sémola , morón ,Avena, maca, siete semillas...
+                                        <textarea class="form-control" id="menestras1" rows="2"></textarea>
+                                    </th>
+                                    <th class="text-secondary">
+                                        Sancochado, sopa, guisos, horneado, tortillas, bebidas.
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Tubérculos - raíces
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">
+                                        Papa blanca, camote, yuca, Olluco, choclo, oca, mashua, chuño,...
+                                        <textarea class="form-control" id="menestras1" rows="2"></textarea>
+                                    </th>
+                                    <th class="text-secondary">Sancochado, guiso, puré, ensalada y sopa</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Hortaliza/ verduras
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">Acelga, alcachofa, apio, espárrago, espinaca, caigua, lechuga, col, brócoli, tomate, pepino, coliflor, zapallo, arveja fresca, vainita, frijol verde, berenjena, champiñones, zanahoria, poro, nabo</th>
+                                    <th class="text-secondary"><span class="text-primary">De preferencia incluya verduras frescas a sus ensaladas. </span> Ensalada cruda y/o cocida ,Caldo, sopas, guiso
+                                        </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Frutas
+                                    </th>
+                                    <th><input type="text" class="form-control"></th>
+                                    <th ><input type="text" class="form-control"></th>
+                                    <th class="text-secondary">
+                                        Mandarina, manzana, kiwi, plátano, pepino, naranja, granadilla, Papaya, melón, sandía...
+                                        <textarea class="form-control" id="menestras1" rows="2"></textarea>
+                                         </th>
+                                    <th class="text-secondary">Bebida</th>
+                                </tr>
+                            </body>
+                        </table>
+                    </div>
+
+
+                </div>
+                <br><br><br><br>
+                <div class="container mt-2  p-3" id="container1">
+                    <div class="row">
+                        <div class="col">
+                            <img src="img/garasas_trans.png" alt="Descripción de la imagen" class="img-fluid rounded">
+
+                        </div>
+                        <div class="col text-danger">
+                            <h3 >Algunos alimentos y/o productos <strong><u>QUE PODRÍAN </u></strong> exacerbar o empeorar el tinnitus: </h3><br>
+                            <ul>
+                                <li>Edulcorantes artificiales</li>
+                                <li>Cafeína</li>
+                                <li>Exceso de azúcar y sal</li>
+                                <li>Grasas trans ( manteca, margarina, comidas empacadas para microondas, fast-food, etc)</li>
+                                <li>Grasas saturadas ( leche entera, mantequilla, queso crema, chocolate, etc)</li>
+                                <li>Bebidas energizantes</li>
+                                <li>Alcohol</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+<br><br><br><br>
+                <div class="container mt-2 border p-3" id="container2"><br>
+                    <h4 class="text-center  border-bottom">INDICACIONES GENERALES:</h4><br>
+                    <ul>
+                        <li>Los alimentos deberían ser medidos al ras, utilizando set de tazas medidoras (1 taza :240 ml) o una cucharadita de té o una cucharita de sopa.</li>
+                        <li>Utilice condimentos, especias y aliños naturales como el ajo, orégano, hongos, laurel, kion, palillo, anís, limón, vainilla, clavo de olor, canela, curri, paprika, romero, culantro, perejil, tomillo. Evite sazonadores como el “ajinomoto”, “Doña Gusta”, “Maggi” </li>
+                        <li>Incluya verduras y frutas de temporada en su alimentación.</li>
+                        <li>Del buen cumplimiento del plan de alimentación, dependerá su estado nutricional.</li>
+                        <li> <textarea class="form-control" id="indicaciones" rows="5"></textarea></li>
+                    </ul>
+                    <br>
+                        <h6 class="text-secondary ">Este plan de alimentación según grupo de alimentos que usted recibe no es para siempre, variará según las indicaciones durante su próximo control nutricional, es por ello por lo que usted siempre debe consultar a su nutricionista para modificar su régimen dietético y evitar confusiones.</h6>
+                 
+                </div>
+                <br><br><br>
+                <div class="container mt-2 border p-3" id="container4">
+                    <h1 class="h5 texto-pregunta text-center"><B>NUTRICIONISTA</B></h1>
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nom_ing" required>
+                            <br>
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apell_ing" required>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <img id="vistaSello" class="img-fluid" />
+                            <hr>
+                            <h1 class="h6 texto-pregunta">Cargar Sello del Médico:</h1>
+                            <input type="file" accept="image/*" id="cargarSello"
+                                onchange="cargarImagen(this, 'vistaSello')" required />
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <img id="vistaFirma" class="img-fluid" " />
+                            <hr>
+                            <h1 class="h6 texto-pregunta">Cargar Firma del Médico:</h1>
+                            <input type="file" accept="image/*" id="cargarFirma"
+                                onchange="cargarImagen(this, 'vistaFirma') " required />
+                           
+                        </div>
+
+
+                    </div>
+                </div><br>
+                
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="finalizarButton">
+                        FINALIZAR
+                    </button>
+                    <a href="javascript:history.back()" type="button" class="btn btn-primary">REGRESAR</a>
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que deseas finalizar el formulario?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Finalizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+            </form>
+
+        </section>
+    </main>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+        <script src="Scripts/Cabecera.js"></script>
+        <script src="Scripts/validar_required.js"></script>
+        <script src="Scripts/Cargar_Sello_firma.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

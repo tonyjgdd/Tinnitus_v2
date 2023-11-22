@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>                    Evaluación Maxilofacial
+    </title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    EVALUACION MAXILOFACIAL       
+                   </h3>
+            </div>
+        </nav>
+    </div>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="dashboard.html">
+               
+
+
+
+                <div class="container mt-5 border p-5" id="container1">
+                    <h1 class="h4 texto-pregunta">Hoja de Evolución:</h1><br>
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="miTabla">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center w-25">
+                                            <div class="row">
+                                                <div class="col">
+                                                    FECHA:  
+                                                </div>
+                                                <div class="col">
+                                                    <input type="date" class="form-control" required>
+                                                </div>
+                                            </div>
+                                           
+                                        </th>
+                                   
+                                        <th  class="text-center">
+                                            DESCRIPCIÓN
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td> <h3 class="text-secondary">Estado del Paciente a la Fecha</h3></td>
+                                        <td colspan="2"> <textarea class="form-control" id="resumen1" rows="6" required></textarea>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td> <h3 class="text-secondary">Actividades Realizadas</h3></td>
+                                        <td colspan="2"> <textarea class="form-control" id="resumen1" rows="6" required></textarea>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td> <h3 class="text-secondary">Equipos Aplicados</h3></td>
+                                        <td colspan="2"> <textarea class="form-control" id="resumen1" rows="6" required></textarea>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td> <h3 class="text-secondary">Recomendaciones de Sesion</h3></td>
+                                        <td colspan="2"> <textarea class="form-control" id="resumen1" rows="6" required></textarea>
+                                        </td>
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-primary" id="agregartabla">Agregar</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <br>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="finalizarButton">
+                        FINALIZAR
+                    </button>
+                  
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que deseas finalizar el formulario?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Finalizar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/validar_required.js"></script>
+    <script src="Scripts/Anadir_tabla.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

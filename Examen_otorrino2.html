@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    EXAMEN OTORRINOLARINGOLOGO       
+                   </h3>
+            </div>
+        </nav>
+    </div>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="examen_otorrino3.html" >
+
+                <div class="container mt-2 border p-3" id="container0">
+                    <h1 class="h5 texto-pregunta">Datos del Paciente:</h1>
+                    <br>
+                    <div class="row mb-3">
+                        <label for="dniInput" class="col-form-label col-md-3">Ingrese DNI del paciente:</label>
+                        <div class="col-md-6">
+                            <input type="number" id="dniInput" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="cargarDatos()">Cargar</button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="col">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                 
+                                    <tbody >
+                                        <tr>
+                                            <td class="col-md-1">Fecha:</td>
+                                            <td><input type="date" id="fechaInput" style="border: none; outline: none;" readonly></td>
+                                        
+                                    
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Nombre:</td>
+                                            <td><input type="text" id="nombreInput" style="border: none; outline: none;" readonly></td>
+                                   
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Apellido:</td>
+                                            <td><input type="text" id="apellidoInput" style="border: none; outline: none;" readonly></td>
+                                        
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Edad:</td>
+                                            <td><input type="number" id="edadInput" style="border: none; outline: none;" readonly></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Ocupacion:</td>
+                                            <td><input type="text" id="ocupacionInput" style="border: none; outline: none;" readonly></td>
+                                          
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Telefono:</td>
+                                            <td><input type="number" id="telefonoInput" style="border: none; outline: none;" readonly></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+
+                <!-- antecedentes -->
+                <div class="container mt-2 border p-3" id="container1">
+                    <h1 class="h5 texto-pregunta">I. ANTECEDENTES:</h1>
+                    <br>
+                    <textarea class="form-control" id="resumen" rows="6" required></textarea>
+                    <br>
+                </div>
+                <!-- anamesis -->
+                <div class="container mt-2 border p-3">
+                    <h1 class="h5 texto-pregunta">II. ANAMNESIS:</h1>
+                    <br>
+                    <div class="container mt-3">
+                        <!--  1 -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <h5>¿Usa Protectores Auditivos?</h5>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" ">
+                                        <label class="btn btn-secondary" >
+                                            <input type="radio" name="options16" id="opcion16_1" autocomplete="off" required> Sí
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options16" id="opcion16_2" autocomplete="off" required> No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <h5>¿Tiempo de exposición de ruido en su trabajo?</h5>
+                                    <input type="number" class="form-control" id="num_hijos"
+                                        placeholder="Tiempo en días" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h5>Apreciación al ruido expuesto</h5>
+                                    <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options15" id="opcion15_1" autocomplete="off" required> Ruido
+                                            No molesto
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options15" id="opcion15_2" autocomplete="off" required> Ruido
+                                            Moderado
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options15" id="opcion15_3" autocomplete="off" required> Ruido
+                                            muy Intenso
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div class="container mt-5">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="2">ANTECEDENTES RELACIONADOS </th>
+                                    <th scope="col" colspan="2">SÍNTOMAS ACTUALES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Traumatismos directos al oído</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options1" id="opcion1_0" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options1" id="opcion1_1" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Disminución de la audición </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options2" id="opcion2_0" autocomplete="off" required> 
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options2" id="opcion2_1" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">Servicio militar, prácticas de caza, tiro al blanco </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options3" id="opcion3_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options3" id="opcion_2" autocomplete="off" required> No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Dolor de oído</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options4" id="opcion4_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options4" id="opcion4_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Exposición laboral a químicos</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options13" id="opcion13_1" autocomplete="off" required> 
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options13" id="opcion13_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Zumbido</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options5" id="opcion5_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options5" id="opcion5_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Infecciones al oído </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options6" id="opcion6_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options6" id="opcion6_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Mareos</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options7" id="opcion7_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options7" id="opcion7_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Uso de ototóxicos </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options8" id="opcion8_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options8" id="opcion8_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Infección al oído </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options9" id="opcion9_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options9" id="opcion9_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Exposición a vibración continúa</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options0" id="opcion0_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options0" id="opcion0_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">No tolerancia a ruidos intensos</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options10" id="opcion10_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options10" id="opcion10_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Uso frecuente de auriculares </th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options11" id="opcion11_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options11" id="opcion11_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">Asistencia frecuente a discotecas o bares</th>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options12" id="opcion12_1" autocomplete="off" required>
+                                                Sí
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options12" id="opcion12_2" autocomplete="off" required>
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- examen fisico -->
+                <div class="container mt-2 border p-3" id="container1">
+                    <h1 class="h5 texto-pregunta">III. EXAMEN FISICO:</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-1">
+                            Otoscopia:
+                        </div>
+                        <div class="col-7">
+                            <textarea class="form-control" id="resumen_otoscopia" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-1">
+                            Rinoscopia:
+                        </div>
+                        <div class="col-7">
+                            <textarea class="form-control" id="resumen_rinoscopia" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-1">
+                            Orofaringe:
+                        </div>
+                        <div class="col-7">
+                            <textarea class="form-control" id="resumen_orofaringe" rows="3" required></textarea>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary" onclick="validarCampos()">
+                                SIGUIENTE
+                                <i class="bi bi-chevron-double-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            </form>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function validarCampos() {
+            var form = document.querySelector('form');
+            
+            if (!form.checkValidity()) {
+                // Si hay campos incompletos, muestra un mensaje de alerta
+                alert('Por favor, completa todos los campos requeridos.');
+                return false; // Evita que el formulario se envíe
+            }
+            return true; // Si todos los campos requeridos están completos, el formulario se enviará
+        }
+        </script>
+
+
+
+</body>
+
+</html>

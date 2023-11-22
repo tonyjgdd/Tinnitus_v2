@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .opcion-celda .opcion.active {
+            background-color: #0388e8;
+            /* Cambia el color de fondo cuando se selecciona */
+            color: #fff;
+            /* Cambia el color del texto para mayor legibilidad */
+        }
+
+        .bordes_exte {
+            border: 1px solid #dad6d6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    CUESTIONARIOS VALORATIVOS       
+                   </h3>  
+            </div>
+        </nav>
+    </div>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="3_EmpeoramientoAcufenos.html">
+
+
+                <div class="container mt-5 border p-5" id="container2">
+                    <h3 class="text-center border-bottom">CUESTIONARIO VALORATIVO DE ACÚFENOS (CVA10)</h3>
+                    <h6 class="text-center">Este cuestionario nos indica la afectación producida por los acúfenos</h6>
+                    
+                    <br><br>
+                    <div class="row">
+                        <h4>Seleccione la respuesta correspondiente:</h4><br><br>
+                        <div class="col">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="bordes_exte">
+                                        <td>1. </td>
+                                        <td class="text-center">¿Está siempre pensando en los acúfenos?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>2. </td>
+                                        <td  class="text-center">¿Le impiden los acúfenos oír mejor?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>3. </td>
+                                        <td  class="text-center">¿Le impiden los acúfenos dormir bien?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>4. </td>
+                                        <td  class="text-center">¿Le impiden los acúfenos dormir bien? </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>5. </td>
+                                        <td  class="text-center">¿Le irritan los acúfenos? </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="bordes_exte">
+                                        <td>6. </td>
+                                        <td class="text-center">¿Le producen ansiedad los acúfenos?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>7. </td>
+                                        <td  class="text-center">¿Le dificultan los acúfenos sus actividades sociales?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>8. </td>
+                                        <td  class="text-center">¿Interfieren los acúfenos en su actividad laboral o domestica?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>9. </td>
+                                        <td  class="text-center">¿Crean tensiones los acúfenos en su relación con familiares y amigos?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bordes_exte">
+                                        <td>10. </td>
+                                        <td  class="text-center">¿Piensa que los acúfenos no tienen solución?</td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="si">Si</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="no">No</button>
+                                        </td>
+                                        <td class="opcion-celda">
+                                            <button type="button" class="btn btn-outline-secondary opcion"
+                                                data-option="talvez">Tal vez</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><br>
+                   
+
+                </div>
+
+                <br>
+
+                <div class=" text-center">
+                    <button class="btn btn-primary">
+                        SIGUIENTE
+                        <i class="bi bi-chevron-double-right"></i>
+                    </button>
+                </div>
+
+                <br>
+            </form>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/validar_required.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.opcion').on('click', function () {
+                // Encuentra los botones en la misma fila
+                var fila = $(this).closest('tr');
+                fila.find('.opcion').removeClass('active');
+                // Agrega la clase 'active' al botón seleccionado
+                $(this).addClass('active');
+            });
+        });
+        $('form').submit(function (e) {
+        if ($('.opcion.active').length === 0) {
+            alert('Por favor, seleccione una opción antes de enviar el formulario.');
+            e.preventDefault(); // Detiene el envío del formulario
+        }
+    });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

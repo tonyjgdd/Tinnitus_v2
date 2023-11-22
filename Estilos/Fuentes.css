@@ -1,0 +1,64 @@
+.subtitulo{
+    font-size: 30px;
+    font-weight: bold;
+}
+.logotipo{
+    width: 8%;
+}
+
+.logotipo2{
+    width: 10%;
+}
+
+/* En tu archivo CSS */
+.card {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    /* Otros estilos de tu elección */
+}
+.barra{
+    margin-top: 10px;
+}
+.content {
+    margin-top: 150px;
+    /* Ajusta el valor según tu necesidad para crear espacio entre la barra de navegación y el contenido */
+
+}
+
+
+.navbar{
+    background-color:   rgb(83, 25, 218)
+}
+
+
+@media screen and (max-width:768px) {
+    .logoprincipal{
+        display: flex;
+        justify-content: center;
+    }
+    .logotipo{
+        width: 300px;
+    }
+}
+
+.toggle-button {
+    font-size: 30px; /* Ajusta el tamaño de fuente a tu elección */
+    padding: 10px 20px; /* Ajusta el padding a tu elección */
+}
+
+.navbar2 {
+    box-shadow: 0px 3px 6px rgba(2, 1, 1, 0.1);
+    /* Añade una sombra con un desplazamiento vertical de 3px y desplazamiento horizontal de 0px */
+}
+
+.btn-purple {
+    background-color: #1894e1; /* Puedes ajustar el código de color según tus preferencias */
+    color: #ffffff; /* Color del texto */
+}
+
+.btn-purple:hover {
+    background-color: #005a74; /* Color de fondo al pasar el ratón por encima del botón */
+    color: #ffffff; /* Color del texto al pasar el ratón por encima del botón */
+}

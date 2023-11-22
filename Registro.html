@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+         <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center" >
+                <h3 style="color:white;">
+                 REGISTRO DE PACIENTE       
+                </h3>    
+            </div>
+        </nav>
+    </div>
+
+ <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <div class="container mt-5 border p-5">
+                <h1 class="text-center">
+                    <i class="bi bi-person-square" style="font-size: 3rem;"></i>
+                </h1>
+                
+                <form action="Acuerdo_ingreso.html" method="get">
+                    <div class="group">
+                        <label for="fecha-nacimiento">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha-actual" required>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-4">
+                            <h1 class="h6 texto-pregunta">FECHA DEL EXAMEN:</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="date" class="form-control" id="fecha-actual" required>
+                        </div>
+                    </div>
+<br>
+                    <div class="row">
+                        <div class="group col">
+                            <label for="estado_civil">Estado Civil:</label>
+                            <select class="form-control" id="estado_civil" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="soltero">Soltero</option>
+                                <option value="casado">Casado</option>
+                                <option value="viudo">Viudo</option>
+                                <option value="divorciado">Divorciado</option>
+                            </select>
+                        </div>
+
+
+                        <div class="group col">
+                            <label for="dni">DNI:</label>
+                            <input type="number" class="form-control" id="dni" placeholder="Número de DNI" required>
+                        </div>
+                    </div>
+<br>
+                    <div class="row">
+                        <div class="group col">
+                            <label for="genero">Género:</label>
+                            <select class="form-control" id="genero" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="group col">
+                            <label for="edad">EDAD:</label>
+                            <input type="number" class="form-control" id="edad" placeholder="Edad actual" required>
+
+                        </div>
+                        <div class="group col">
+                            <label for="num_hijos">NUM. DE HIJOS:</label>
+                            <input type="number" class="form-control" id="num_hijos" placeholder="Cantidad de hijos"
+                                required>
+
+                        </div>
+                    </div>
+<br>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="lugar_residencia">Lugar de Residencia:</label>
+                            <input type="text" class="form-control" id="lugar_residencia"
+                                placeholder="Localidad en la que reside actualmente" required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="profesion">Profesion:</label>
+                            <input type="text" class="form-control" id="profesion" placeholder="Profesion" required>
+                        </div>
+                    </div>
+
+
+<br>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary mx-auto" id="regibtn" data-bs-toggle="modal" data-bs-target="#confirmModal">
+                            Registrar Paciente</button>
+                    </div>
+                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirmModalLabel">Confirmación de Envío</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de enviar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+               
+
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="Scripts/fecha.js   "></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--window.onscroll = function() {
+    var navbar = document.getElementById("cont-barra");
+    var altura = document.getElementById("cont-cabecera");
+    var alturahome = document.getElementById("cont-home");
+    if (window.scrollY > (altura.offsetHeight + 35)) {
+      navbar.classList.add("fixed-top");
+      navbar.classList.add("mt-0");
+      alturahome.style.marginTop = ((navbar.offsetHeight)+25) + "px";
+    } else {
+      navbar.classList.remove("fixed-top");
+      navbar.classList.remove("mt-0");
+      alturahome.style.marginTop = 0;
+    } 
+  };
+  -->
+
+</body>
+
+</html>

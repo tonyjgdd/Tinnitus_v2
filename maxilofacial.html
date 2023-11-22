@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxilofacial</title>
+    <!-- Incluye la biblioteca de Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos/imagenes.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegacion / Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="cont-cabecera">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="MiSitioWeb" width="200">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Titulo documento/scroll-->
+
+    <div id="cont-barra">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  d-flex justify-content-center">
+                <h3 style="color:white;">
+                    EVALUACION MAXILOFACIAL       
+                   </h3>
+            </div>
+        </nav>
+    </div>
+
+    <!-- cuerpo -->
+    <main>
+        <section class="home" id="cont-home">
+
+            <form action="maxilofacial_evolucion.html">
+                <!-- antecedentes -->
+                <div class="container mt-2 border p-3" id="container1">
+                    <h1 class="h4 texto-pregunta">Anamnesis:</h1>
+                    <br>
+                    <div class="row mb-3">
+                        <label for="dniInput" class="col-form-label col-md-3">Ingrese DNI del paciente:</label>
+                        <div class="col-md-6">
+                            <input type="number" id="dniInput" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="cargarDatos()">Cargar</button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="col">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-1">Fecha nacimiento:</td>
+                                            <td><input type="date" id="fecha_nac" style="border: none; outline: none;"
+                                                    readonly></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Nombre:</td>
+                                            <td><input type="text" id="nombreInput" style="border: none; outline: none;"
+                                                    readonly></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Apellido:</td>
+                                            <td><input type="text" id="apellidoInput"
+                                                    style="border: none; outline: none;" readonly></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">Edad:</td>
+                                            <td><input type="number" id="edadInput" style="border: none; outline: none;"
+                                                    readonly></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">diagnóstico Medico:</td>
+                                            <td>
+                                                <textarea class="form-control" id="dianostico" rows="6"
+                                                    required></textarea>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-1">antecedentes:</td>
+                                            <td>
+                                                <textarea class="form-control" id="antecedentes" rows="6"
+                                                    required></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <br>
+                <div class="container mt-2 border p-3" id="container2">
+                    <h1 class="h4 texto-pregunta">Evaluación Facial:</h1><br>
+                    <div class="row">
+                        <div class="col text-center">
+                            <img class="img-fluid w-50" src="img/facial.png">
+                        </div>
+                        <div class="col-8">
+                            <textarea class="form-control" id="antecedentes" rows="8" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container mt-2 border p-4" id="container3">
+                    <h1 class="h4 texto-pregunta">Evaluación Muscular:</h1><br><br>
+                    <div class="row">
+                        <h3 class="h5 texto-pregunta">Cintura Escapular:</h3>
+                        <div class="col">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Estado Muscular</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <textarea class="form-control" id="cintura_esc" rows="6"
+                                                required></textarea></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Presencia de Dolor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <textarea class="form-control" id="cintura_esc" rows="6"
+                                                required></textarea></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <h3 class="h5">Cadena Masticatoria:</h3>
+                        <div class="col">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Estado Muscular</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <textarea class="form-control" id="cintura_esc" rows="6"
+                                                required></textarea></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Presencia de Dolor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <textarea class="form-control" id="cintura_esc" rows="6"
+                                                required></textarea></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                </div><br>
+
+
+                <div class="container mt-2 border p-3" id="container4">
+                    <h1 class="h4 texto-pregunta">Evaluación Funcional:</h1><br><br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th> Lateralización</th>
+                                    <th>Hacia la Derecha</th>
+                                    <th>Hacia la Izquierda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-25">
+                                        <img src="img/cara.png" class="img-fluid w-75" alt="Descripción de la imagen">
+                                    </td>
+                                    <td><textarea class="form-control" id="dere" rows="7" required></textarea>
+                                    </td>
+                                    <td><textarea class="form-control" id="izq" rows="7" required></textarea>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th> Inclinación</th>
+                                    <th>Hacia la Derecha</th>
+                                    <th>Hacia la Izquierda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-25">
+                                        <img src="img/cara.png" class="img-fluid w-75" alt="Descripción de la imagen">
+                                    </td>
+                                    <td><textarea class="form-control" id="dere" rows="7" required></textarea>
+                                    </td>
+                                    <td><textarea class="form-control" id="izq" rows="7" required></textarea>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th> Movimiento</th>
+                                    <th>Flexión</th>
+                                    <th>Extensión</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-25">
+                                        <img src="img/cara.png" class="img-fluid w-75" alt="Descripción de la imagen">
+                                    </td>
+                                    <td><textarea class="form-control" id="dere" rows="7" required></textarea>
+                                    </td>
+                                    <td><textarea class="form-control" id="izq" rows="7" required></textarea>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th></th>
+                                    <th>Sonido</th>
+                                    <th>Dolor</th>
+                                    <th>Trayectoria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-25 text-center">
+                                        <h2>APERTURA  BUCAL
+                                        </h2>
+                                    </td>
+                                    <td><textarea class="form-control" rows="5" required></textarea>
+                                    </td>
+                                    <td><textarea class="form-control" rows="5" required></textarea>
+                                    </td>
+                                    <td><textarea class="form-control" rows="5" required></textarea>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <br><br>
+
+                <div class="container mt-2 border p-4" id="container0">
+                    <h1 class="h4 texto-pregunta">Observaciones Generales:</h1><br>
+                    <td><textarea class="form-control" rows="6" required></textarea>
+                  <br>
+                        <div class="text-end mt-3">
+                            <button type="submit" class="btn btn-primary" id="finalizarButton">
+                                SIGUIENTE
+                                <i class="bi bi-chevron-double-right"></i>
+                            </button>
+                        </div>
+
+                </div><br>
+            </form>
+
+        </section>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="Scripts/Cabecera.js"></script>
+    <script src="Scripts/Cargar_Sello_firma.js"></script>
+    <script src="Scripts/validar_required.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

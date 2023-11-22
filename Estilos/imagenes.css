@@ -1,0 +1,28 @@
+/* Estilos generales para la imagen del logo */
+.logo-img {
+    max-width: 25%; /* La imagen no será más ancha que su contenedor */
+    height: auto; /* Asegura que la imagen sea proporcionalmente redimensionada */
+    display: block; /* Elimina cualquier espacio vacío debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente en su contenedor */
+}
+
+.navbar-brand {
+    display: inline-block;
+}
+
+#titulo-pegajoso {
+    top: 13%;
+    width: 100%;
+    height: 50px;
+    background-color: #fff; /* Opcional: puedes establecer un fondo blanco u otro color para que contraste con el contenido de la página */
+    z-index: 999; /* Asegura que el título esté por encima del contenido */
+    padding: 10px; /* Opcional: agrega espacio alrededor del título para que se vea mejor */
+}
+
+.navbar{
+    background-color:  rgb(74, 132, 241);
+}
+.btn-color {
+    background-color:  #c3d5e8; /* Cambia el color de fondo del botón activo */
+    /* Cambia el color del texto del botón activo */
+}
