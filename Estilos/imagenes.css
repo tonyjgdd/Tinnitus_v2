@@ -9,6 +9,26 @@
 .navbar-brand {
     display: inline-block;
 }
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#drop-area img {
+    max-width: 100%;
+    height: auto;
+    /* Ajuste automático de la altura */
+    margin: 10px 0;
+}
+
+#preview {
+    max-width: 100%;
+    overflow-x: auto;
+    /* Agregado para permitir el desplazamiento horizontal si es necesario */
+}
 
 #titulo-pegajoso {
     top: 13%;

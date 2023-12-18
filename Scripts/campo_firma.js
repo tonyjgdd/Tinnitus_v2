@@ -1,6 +1,5 @@
 
-  
-
+/*
 var canvas = document.getElementById('campo-firma');
 var signaturePad = new SignaturePad(canvas, {
     backgroundColor: 'transparent', // Fondo transparente
@@ -20,3 +19,4 @@ botonBorrar.addEventListener('click', function () {
     canvas.getContext('2d').drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 });
 
+*/
