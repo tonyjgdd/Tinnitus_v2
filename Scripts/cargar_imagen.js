@@ -1,4 +1,3 @@
-
 document.getElementById('drop-area').addEventListener('click', function () {
     document.getElementById('fileInput').click();
 });
@@ -32,18 +31,27 @@ function handleFiles(files) {
     for (var i = 0; i < files.length; i++) {
         var file = files[i];
 
-        if (file.type.match('image.*')) {
+        if (file.type.match('image.*') || file.type === 'application/pdf') {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                var img = document.createElement('img');
-                img.src = e.target.result;
-                preview.appendChild(img);
+                if (file.type.match('image.*')) {
+                    var img = document.createElement('img');
+                    img.src = e.target.result;
+                    preview.appendChild(img);
+                } else if (file.type === 'application/pdf') {
+                    var embed = document.createElement('embed');
+                    embed.src = e.target.result;
+                    embed.type = 'application/pdf';
+                    embed.width = '100%';
+                    embed.height = '500px';
+                    preview.appendChild(embed);
+                }
             };
 
             reader.readAsDataURL(file);
         } else {
-            alert('Por favor, selecciona solo archivos de imagen.');
+            alert('Por favor, selecciona solo archivos de imagen o PDF.');
         }
     }
 }

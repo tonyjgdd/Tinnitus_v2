@@ -20,7 +20,18 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<style>
+    #dataTable tbody tr.selected {
+    background-color: #c8e6c9; /* Cambia el color de fondo a tu preferencia */
+    color: #000; /* Cambia el color del texto a tu preferencia */
 
+
+}
+#dataTable tbody tr:hover {
+    cursor: pointer;
+}
+
+</style>
 </head>
 
 <body id="page-top">
@@ -90,14 +101,14 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="1_CuestionariosValorativos.html">Cuestionario Valorativo</a>
-                            <a class="collapse-item" href="Examen_otorrino.html">Exm. Otorrinolaringologo</a>
-                            <a class="collapse-item" href="HistoriaClinicaTinntus.html">Hist. Clinica Tinnitus</a>
-                            <a class="collapse-item" href="test_ingenieria.html">Test de Ingenieria</a>
-                            <a class="collapse-item" href="terapia_reentrenamiento.html">Terapia Reentrenamiento</a>
-                            <a class="collapse-item" href="eva_psicologia.html">Psicologia</a>
-                            <a class="collapse-item" href="nutricion.html">Nutricion</a>
-                            <a class="collapse-item" href="maxilofacial.html">Maxilofacial </a>
-                       </div>
+                        <a class="collapse-item" href="Examen_otorrino.html">Exm. Otorrinolaringologo</a>
+                        <a class="collapse-item" href="HistoriaClinicaTinntus.html">Hist. Clinica Tinnitus</a>
+                        <a class="collapse-item" href="test_ingenieria.html">Test de Ingenieria</a>
+                        <a class="collapse-item" href="terapia_reentrenamiento.html">Terapia Reentrenamiento</a>
+                        <a class="collapse-item" href="eva_psicologia.html">Psicologia</a>
+                        <a class="collapse-item" href="nutricion.html">Nutricion</a>
+                        <a class="collapse-item" href="maxilofacial.html">Maxilofacial </a>
+                    </div>
                 </div>
             </li>
 
@@ -162,8 +173,8 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small"
-                                placeholder="Buscar cita..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar cita..."
+                                aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -352,16 +363,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    
+
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div>
                             <h1 class="h3 mb-2 text-gray-800">Citas</h1>
                             <p class="mb-4"> Registrados en Tinnitus Peru sede - San Borja</p>
                         </div>
-                       
+
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                            <i class="bi bi-person-plus-fill fa-2x text-white-50"></i> 
+                            <i class="bi bi-person-plus-fill fa-2x text-white-50"></i>
                             <b>Nueva Cita</b> </a>
                     </div>
                     <!-- Page
@@ -372,38 +383,39 @@
                             <h6 class="m-0 font-weight-bold text-primary">
                                 <div class="text-left">
                                     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                                        <i class="bi bi-download"></i> 
+                                        <i class="bi bi-download"></i>
                                         <b>Imprimir</b> </a>
                                 </div>
-                            
+
 
                                 <div class="text-right">
-                                    <div class="col   ">
-                                        Editar cita
-                                        <i class="bi bi-pencil"></i>
-                                    </div>
-                                
                                     <div class="col">
-                                        Eliminar
-                                        <i class="bi bi-trash" ></i>
+                                      
+                                        <button type="button" class="btn btn-primary">
+                                            Editar cita
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            Eliminar
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-success">
+                                            Ver
+                                            <i class="bi bi-eye"></i>
+                                        </button>
 
                                     </div>
-                                    <div class="col">
-                                        Ver
-                                        <i class="bi bi-eye"></i>
-                                    </div>  
+
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                     Ordenar por: 
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">Fecha</a>
-                                      <a class="dropdown-item" href="#">Hora</a>
-                                      <a class="dropdown-item" href="#">Alfabet.</a>
-                                      <!-- Puedes agregar más opciones según sea necesario -->
-                                    </div>
-                                  </div>
+                                <div class="col-3">
+                                    <div class="dropdown">
+                                    
+                                        <label for="fecha-nacimiento">Filtrar Fecha:</label>
+                                        <input type="date" class="form-control" id="fecha-actual" required>
+                                  
+                                </div>
+                                </div>
+                              
 
 
                             </h6>
@@ -413,131 +425,69 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Fecha</th>
+                                            <th>Id</th>
                                             <th>Hora</th>
                                             <th>Paciente</th>
                                             <th>Dni Paciente</th>
                                             <th>Medico</th>
-                                            <th>Consultorio</th>
+                                            <th>Servicio</th>
                                             <th>Estado</th>
-                                            <th><b>Accion</b></th>
+                                          
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Fecha</th>
+                                            <th>Id</th>
                                             <th>Hora</th>
                                             <th>Paciente</th>
                                             <th>Dni Paciente</th>
                                             <th>Medico</th>
-                                            <th>Consultorio</th>
+                                            <th>Servicio</th>
                                             <th>Estado</th>
-                                            <th><b>Accion</b></th>
+                                           
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>21/01/24</td>
+                                            <td>0001</td>
                                             <td>10:00 a.m</td>
                                             <td>Pedro</td>
                                             <td>85365259</td>
                                             <td>Dr. Garcia</td>
                                             <td>Audiología</td>
                                             <td>Activo</td>
-                                            <td>
-
-                                                <div class="dropdown">
-                                                    <button type="button" class="btn btn-success">
-                                                        <i class="bi bi-eye"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="bi bi-pencil"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-danger">
-                                                    
-                                                    <i class="bi bi-trash"></i>
-                                                    </button>
-                                                   
-                                                </div>
-
-                                            </td>
+                                        </tr>
                                         <tr>
-                                            <td>22/01/24</td>
+                                            <td>0002</td>
                                             <td>11:00 a.m</td>
                                             <td>Maria</td>
                                             <td>23658996</td>
                                             <td>Dr. Felipe</td>
                                             <td>Rehabilitación auditiva</td>
                                             <td>Cancelado</td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button type="button" class="btn btn-success">
-                                                        <i class="bi bi-eye"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="bi bi-pencil"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-danger">
-                                                    
-                                                    <i class="bi bi-trash"></i>
-                                                    </button>
-                                                   
-                                                </div>
-                                            </td>
+                                           
                                         </tr>
 
                                         <tr>
-                                            <td>22/01/24</td>
+                                            <td>0003</td>
                                             <td>08.00 a.m</td>
                                             <td>coronado</td>
                                             <td>6355857</td>
                                             <td>Dr. Clara</td>
                                             <td>Psicologia</td>
                                             <td>Activo</td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button type="button" class="btn btn-success">
-                                                        <i class="bi bi-eye"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="bi bi-pencil"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-danger">
-                                                    
-                                                    <i class="bi bi-trash"></i>
-                                                    </button>
-                                                   
-                                                </div>
-                                            </td>
+                                           
                                         </tr>
 
                                         <tr>
-                                            <td>22/01/24</td>
+                                            <td>0004</td>
                                             <td>14.00 p.m</td>
                                             <td>Alfredo</td>
                                             <td>8547569</td>
                                             <td>Dr. Garcia</td>
                                             <td>Audiologia</td>
                                             <td>Activo</td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button type="button" class="btn btn-success">
-                                                        <i class="bi bi-eye"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="bi bi-pencil"></i>
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-danger">
-                                                    
-                                                    <i class="bi bi-trash"></i>
-                                                    </button>
-                                                   
-                                                </div>
-                                            </td>
+                                            
                                         </tr>
 
                                     </tbody>
@@ -603,7 +553,9 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
+    
+    <script src="Scripts/selec_tabla.js"></script>
+    
 </body>
 
 </html>
